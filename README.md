@@ -8,23 +8,25 @@
 	- Polaris
 	- Fiji
 
+
 #### 1. Install general dependencies
 - ```sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler```
 - ```sudo apt-get install --no-install-recommends libboost-all-dev```
 
-#### 1. Install AMDGPU-PRO Driver for Linux
+
+#### 2. Install AMDGPU-PRO Driver for Linux
 - [Download AMDGPU-PRO Driver](http://support.amd.com/en-us/kb-articles/Pages/AMDGPU-PRO-Driver-for-Linux-Release-Notes.aspx)
 - [Follow instruction to install AMDGPU-PRO Driver for Ubuntu](http://support.amd.com/en-us/kb-articles/Pages/AMDGPU-PRO-Install.aspx)
 
 
-#### 2. Download [Caffe](https://github.com/BVLC/caffe)
+#### 3. Download [Caffe](https://github.com/BVLC/caffe)
 - Download Caffe (on this example, download repository to home folder)
 	```> git clone https://github.com/BVLC/caffe```
 - Switch to OpenCL branch (verified commit [51f2986](https://github.com/BVLC/caffe/tree/51f2986ee0c3955bfaaa495b25e9a1d0a7036c26) works)
 	```> git checkout opencl```
 
 
-#### 3. Install [ViennaCL](http://viennacl.sourceforge.net/) library
+#### 4. Install [ViennaCL](http://viennacl.sourceforge.net/) library
 - [Download ViennaCL for Linux](http://viennacl.sourceforge.net/viennacl-download.html)
 - Extract downloaded folder
 	'``> tar -xvf ViennalCL-<version>.tar.gz```
@@ -32,7 +34,7 @@
 	```> cp -r ViennalCL-<version> ~/caffe```
 
 
-##### 4. Install [Caffe](https://github.com/BVLC/caffe)
+##### 5. Install [Caffe](https://github.com/BVLC/caffe)
 - Create directory for cmake
 	```> mkdir build```
 - Navigate to `build` 
@@ -50,7 +52,7 @@
 	ps. add `-j<# core>` to speed up process
 
 
-#### 5. Install Caffe for Python
+#### 6. Install Caffe for Python
 - Navigate to `python` in `/caffe`
 	```> cd python```
 - Install all required packages with `pip`
