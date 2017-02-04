@@ -19,9 +19,7 @@
 - Upgrade the packages: ```sudo apt-get upgrade```
 
 #### 2. Install general dependencies
-- ```sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler```
-- ```sudo apt-get install --no-install-recommends libboost-all-dev```
-
+- ```sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler libatlas-base-dev libblas-dev libgflags-dev libgoogle-glog-dev liblmdb-dev libboost-all-dev```
 
 #### 3. Install AMDGPU-PRO Driver for Linux
 - [Download AMDGPU-PRO Driver](http://support.amd.com/en-us/kb-articles/Pages/AMDGPU-PRO-Driver-for-Linux-Release-Notes.aspx)
@@ -50,8 +48,8 @@
 - Navigate to `build` 
 	```> cd build```
 - Configure and cmake Caffe
-	```> cmake -DViennaCL_INCLUDE_DIR=../ViennaCL-<version> -DOPENCL_LIBRARIES=/opt/amdgpu-pro/lib/x86_64-linux-gnu/libOpenCL.so.1 ..```
-    p.s. by default OpenCL header for AMDGPU is at `/opt/amdgpu-pro/x86_64-linux-gnu/libOpenCL.so.1`
+	```> cmake -DViennaCL_INCLUDE_DIR=../ViennaCL-<version> -DOPENCL_INCLUDE_DIRS=../ViennaCL-<version>/CL/ -DOPENCL_LIBRARIES=/opt/amdgpu-pro/lib/x86_64-linux-gnu/libOpenCL.so.1 ..```
+    Note: By default OpenCL libraries for AMDGPU is at `/opt/amdgpu-pro/x86_64-linux-gnu/libOpenCL.so.1`
 - Compile Caffe
 	```> make```
 	p.s. add `-j<# core>` to speed up process
@@ -59,9 +57,18 @@
 	```> make install```
 - Test Caffe
 	```> make runtest```
-	ps. add `-j<# core>` to speed up process
+	Note2: For multithreaded build, add `-j<# cores_available>` to speed up process. Eg. make -j8 for 8 threaded CPU.
 
+##### 6. Try CIFAR (CANADIAN INSTIT. FOR ADVANCED RESEARCH DATA TRAINING)
+- Go to `/caffe`
+- Invoke the commands from the caffe top module folder (i.e /caffe):
+	- ./data/cifar/get_cifar10.sh
+	- ./examples/cifar10/create_cifar10.sh 
+	- ./examples/cifar10/train_quick.sh 
 
+	Note: You can substitute train_quick with train_full for creating a full blown model.
+	
+********* WE NEED TO INSTALL AND BUILD THIS ONE FIRST ***********
 #### 7. Install Caffe for Python
 - Navigate to `python` in `/caffe`
 	```> cd python```
