@@ -28,9 +28,10 @@
 
 #### 4. Download [Caffe](https://github.com/BVLC/caffe)
 - Download Caffe (on this example, download repository to home folder)
-	```> cd ~ ; git clone https://github.com/BVLC/caffe```
-	```> cd caffe ; git checkout opencl```
-	```> export OCLCAFFE=$PWD```
+	- ```> cd ~ ; git clone https://github.com/BVLC/caffe```
+	- ```> cd caffe ; git checkout opencl```
+	- ```> export OCLCAFFE=$PWD```
+	
 
 #### 5. Install [ViennaCL](http://viennacl.sourceforge.net/) library
 - [Download ViennaCL for Linux](http://viennacl.sourceforge.net/viennacl-download.html)
