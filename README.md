@@ -13,7 +13,6 @@
 	- Polaris (RX460)
 	- Fiji (R9 Fury, Fury X)
 
-
 #### 1. Update to latest Canonical release
 - Update the apt metadata: ```sudo apt-get update```
 - Upgrade the packages: ```sudo apt-get upgrade```
@@ -29,10 +28,9 @@
 
 #### 4. Download [Caffe](https://github.com/BVLC/caffe)
 - Download Caffe (on this example, download repository to home folder)
-	```> git clone https://github.com/BVLC/caffe```
-- Switch to OpenCL branch (verified commit [51f2986](https://github.com/BVLC/caffe/tree/51f2986ee0c3955bfaaa495b25e9a1d0a7036c26) works)
-	```> git checkout opencl```
-
+	```> cd ~ ; git clone https://github.com/BVLC/caffe```
+	```> cd caffe ; git checkout opencl```
+	```> export OCLCAFFE=$PWD```
 
 #### 5. Install [ViennaCL](http://viennacl.sourceforge.net/) library
 - [Download ViennaCL for Linux](http://viennacl.sourceforge.net/viennacl-download.html)
