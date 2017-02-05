@@ -64,7 +64,7 @@
 	- ./examples/cifar10/create_cifar10.sh 
 	- ./examples/cifar10/train_quick.sh 
 
-	-Note: You can substitute train_quick with train_full as needed. This will increase the time needed to fully train the model, however. 
+	- Note: You can substitute train_quick with train_full as needed. This will increase the time needed to fully train the model, however. 
 	
 #### 7. Install Caffe for Python
 - Navigate to `python` in `/caffe`
