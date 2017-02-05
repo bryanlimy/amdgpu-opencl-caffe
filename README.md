@@ -19,19 +19,18 @@
 
 #### 2. Install general dependencies
 - ```sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler libatlas-base-dev libblas-dev libgflags-dev libgoogle-glog-dev liblmdb-dev libboost-all-dev```
+- For Caffe's python interface, see section #7 below. 
 
 #### 3. Install AMDGPU-PRO Driver for Linux
 - [Download AMDGPU-PRO Driver](http://support.amd.com/en-us/kb-articles/Pages/AMDGPU-PRO-Driver-for-Linux-Release-Notes.aspx)
 - [Follow instruction to install AMDGPU-PRO Driver for Ubuntu](http://support.amd.com/en-us/kb-articles/Pages/AMDGPU-PRO-Install.aspx)
 -Reboot to the kernel that loads the installed drivers
 
-
 #### 4. Download [Caffe](https://github.com/BVLC/caffe)
 - Download Caffe (on this example, download repository to home folder)
 	- ```> cd ~ ; git clone https://github.com/BVLC/caffe```
 	- ```> cd caffe ; git checkout opencl```
 	- ```> export OCLCAFFE=$PWD```
-	
 
 #### 5. Install [ViennaCL](http://viennacl.sourceforge.net/) library
 - [Download ViennaCL for Linux](http://viennacl.sourceforge.net/viennacl-download.html)
@@ -40,18 +39,17 @@
 - Copy extracted folder to Caffe
 	```> cp -r ViennalCL-<version> ~/caffe```
 
-
 ##### 6. Install [Caffe](https://github.com/BVLC/caffe)
 - Create directory for cmake
 	```> mkdir build```
 - Navigate to `build` 
 	```> cd build```
 - Configure and cmake Caffe
-	```> cmake -DViennaCL_INCLUDE_DIR=../ViennaCL-<version> -DOPENCL_INCLUDE_DIRS=../ViennaCL-<version>/CL/ -DOPENCL_LIBRARIES=/opt/amdgpu-pro/lib/x86_64-linux-gnu/libOpenCL.so.1 ..```
+	```> cmake -DViennaCL_INCLUDE_DIR=../ViennaCL-* -DOPENCL_INCLUDE_DIRS=../ViennaCL-*/CL/ -DOPENCL_LIBRARIES=/opt/amdgpu-pro/lib/x86_64-linux-gnu/libOpenCL.so.1 ..```
     Note: By default OpenCL libraries for AMDGPU is at `/opt/amdgpu-pro/x86_64-linux-gnu/libOpenCL.so.1`
 - Compile Caffe
 	```> make```
-	p.s. add `-j<# core>` to speed up process
+	Note: You can enable multithreaded compilation with`-j<# core>` to speed up the process. For an 8 core machine we can use : ```make -j9```
 - Install Caffe
 	```> make install```
 - Test Caffe
@@ -67,11 +65,10 @@
 
 	Note: You can substitute train_quick with train_full for creating a full blown model.
 	
-********* WE NEED TO INSTALL AND BUILD THIS ONE FIRST ***********
 #### 7. Install Caffe for Python
 - Navigate to `python` in `/caffe`
 	```> cd python```
 - Install all required packages with `pip`
 	```> for req in $(cat requirements.txt); do sudo -H pip install $req; done```
 - Add PyCaffe module to `$PYTHONPATH`
-	```> export PYTHONPATH=/home/aes/caffe/python:$PYTHONPATH```
+	```> export PYTHONPATH=$OCLCAFFE/python:$PYTHONPATH```
