@@ -8,7 +8,8 @@
 
 
 #### System Requirement
-- Ubuntu 16.04 or equivalent 
+- Ubuntu 16.04 or equivalent
+	- Note that a supported (valid) opencl enabled driver stack is needed from AMD
 - AMD Radeon GPU (tested on):
 	- Polaris (RX460)
 	- Fiji (R9 Fury, Fury X)
