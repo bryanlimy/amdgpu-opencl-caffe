@@ -55,7 +55,7 @@
 ##### 7. Try CIFAR (CANADIAN INSTIT. FOR ADVANCED RESEARCH DATA TRAINING)
 - Go to your caffe path : ```cd $OCLCAFFE```
 - Invoke the commands from the caffe top module folder (i.e `~/caffe`):
-	- `./data/cifar/get_cifar10.sh`
+	- `./data/cifar10/get_cifar10.sh`
 	- `./examples/cifar10/create_cifar10.sh`
 	- `./examples/cifar10/train_quick.sh`
 
