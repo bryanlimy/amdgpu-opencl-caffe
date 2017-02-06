@@ -29,9 +29,9 @@
 
 #### 4. Download [Caffe](https://github.com/BVLC/caffe)
 - Download Caffe (on this example, download repository to home folder)
-	- ```> cd ~ ; git clone https://github.com/BVLC/caffe```
-	- ```> cd caffe ; git checkout opencl```
-	- ```> export OCLCAFFE=$PWD```
+	- `> cd ~ ; git clone https://github.com/BVLC/caffe`
+	- `> cd caffe ; git checkout opencl`
+	- `> export OCLCAFFE=$PWD`
 
 #### 5. Copy [ViennaCL](http://viennacl.sourceforge.net/) library
 - [Download ViennaCL for Linux](http://viennacl.sourceforge.net/viennacl-download.html)
@@ -47,18 +47,17 @@
 	- ```> cmake -DViennaCL_INCLUDE_DIR=../ViennaCL-* -DOPENCL_INCLUDE_DIRS=../ViennaCL-*/CL/ -DOPENCL_LIBRARIES=/opt/amdgpu-pro/lib/x86_64-linux-gnu/libOpenCL.so.1 ..```
 	- Note: By default OpenCL libraries for AMDGPU is at `/opt/amdgpu-pro/x86_64-linux-gnu/libOpenCL.so.1`
 - Compile Caffe: ```> make```
-	- Note: You can enable multithreaded compilation with`-j<# threads_available>` to speed up the process. 
-	- For an 8 core machine we can use : ```make -j8```
+	- Note: You can enable multithreaded compilation with`-j<# threads_available>` to speed up the process. (i.e. for an 8 core machine we can use : `make -j8`)
 - Install Caffe: ```> make install```
 - Test Caffe: ```> make runtest```
-	- Note2: For multithreaded build, add `-j<# cores_available>` to speed up process. Eg. make -j8 for 8 threaded CPU.
+	- Note: For multithreaded build, add `-j<# cores_available>` to speed up process. (i.e. for an 8 core machine we can use : `make -j8`)
 
 ##### 7. Try CIFAR (CANADIAN INSTIT. FOR ADVANCED RESEARCH DATA TRAINING)
 - Go to your caffe path : ```cd $OCLCAFFE```
-- Invoke the commands from the caffe top module folder (i.e ~/caffe):
-	- ./data/cifar/get_cifar10.sh
-	- ./examples/cifar10/create_cifar10.sh 
-	- ./examples/cifar10/train_quick.sh 
+- Invoke the commands from the caffe top module folder (i.e `~/caffe`):
+	- `./data/cifar/get_cifar10.sh`
+	- `./examples/cifar10/create_cifar10.sh`
+	- `./examples/cifar10/train_quick.sh`
 
 - Note: You can substitute train_quick with train_full as needed. This will increase the time needed to fully train the model, however. 
 	
