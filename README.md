@@ -19,7 +19,7 @@
 - Upgrade the packages: ```sudo apt-get upgrade```
 
 #### 2. Install general dependencies
-- ```sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler libatlas-base-dev libblas-dev libgflags-dev libgoogle-glog-dev liblmdb-dev libboost-all-dev```
+- ```sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler libatlas-base-dev libblas-dev libgflags-dev libgoogle-glog-dev liblmdb-dev libboost-all-dev git```
 - For Caffe's python interface, see section #7 below. 
 
 #### 3. Install AMDGPU-PRO Driver for Linux
