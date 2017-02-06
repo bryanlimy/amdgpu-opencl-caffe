@@ -58,7 +58,7 @@
 	```> make runtest```
 	Note2: For multithreaded build, add `-j<# cores_available>` to speed up process. Eg. make -j8 for 8 threaded CPU.
 
-##### 6. Try CIFAR (CANADIAN INSTIT. FOR ADVANCED RESEARCH DATA TRAINING)
+##### 7. Try CIFAR (CANADIAN INSTIT. FOR ADVANCED RESEARCH DATA TRAINING)
 - Go to your caffe path : ```cd $OCLCAFFE```
 - Invoke the commands from the caffe top module folder (i.e ~/caffe):
 	- ./data/cifar/get_cifar10.sh
@@ -67,7 +67,7 @@
 
 - Note: You can substitute train_quick with train_full as needed. This will increase the time needed to fully train the model, however. 
 	
-#### 7. Install Caffe for Python
+#### 8. Install Caffe for Python
 - Navigate to `python` in `/caffe`
 	```> cd python```
 - Install all required packages with `pip`
