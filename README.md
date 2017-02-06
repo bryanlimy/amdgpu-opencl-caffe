@@ -19,7 +19,7 @@
 - Upgrade the packages: ```sudo apt-get upgrade```
 
 #### 2. Install general dependencies
-- ```sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler libatlas-base-dev libblas-dev libgflags-dev libgoogle-glog-dev liblmdb-dev libboost-all-dev git```
+- ```sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler libatlas-base-dev libblas-dev libgflags-dev libgoogle-glog-dev liblmdb-dev libboost-all-dev cmake git```
 - For Caffe's python interface, see section #7 below. 
 
 #### 3. Install AMDGPU-PRO Driver for Linux
@@ -33,7 +33,7 @@
 	- ```> cd caffe ; git checkout opencl```
 	- ```> export OCLCAFFE=$PWD```
 
-#### 5. Install [ViennaCL](http://viennacl.sourceforge.net/) library
+#### 5. Copy [ViennaCL](http://viennacl.sourceforge.net/) library
 - [Download ViennaCL for Linux](http://viennacl.sourceforge.net/viennacl-download.html)
 - Extract downloaded folder
 	'``> tar -xvf ViennalCL-<version>.tar.gz```
