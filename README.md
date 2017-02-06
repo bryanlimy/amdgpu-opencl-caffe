@@ -19,7 +19,7 @@
 - Upgrade the packages: ```sudo apt-get upgrade```
 
 #### 2. Install general dependencies
-- ```sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler libatlas-base-dev libblas-dev libgflags-dev libgoogle-glog-dev liblmdb-dev libboost-all-dev cmake git python-numpy```
+- ```sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler libatlas-base-dev libblas-dev libgflags-dev libgoogle-glog-dev liblmdb-dev libboost-all-dev cmake git python-numpy cmake```
 - For Caffe's python interface, see section #7 below. 
 
 #### 3. Install AMDGPU-PRO Driver for Linux
@@ -41,22 +41,17 @@
 	```> cp -r ViennalCL-<version> ~/caffe```
 
 ##### 6. Install [Caffe](https://github.com/BVLC/caffe)
-- Create directory for cmake
-	```> mkdir build```
-- Navigate to `build` 
-	```> cd build```
+- Create directory for cmake: ```> mkdir build```
+- Navigate to `build`: ```> cd build```
 - Configure and cmake Caffe
-	```> cmake -DViennaCL_INCLUDE_DIR=../ViennaCL-* -DOPENCL_INCLUDE_DIRS=../ViennaCL-*/CL/ -DOPENCL_LIBRARIES=/opt/amdgpu-pro/lib/x86_64-linux-gnu/libOpenCL.so.1 ..```
-    Note: By default OpenCL libraries for AMDGPU is at `/opt/amdgpu-pro/x86_64-linux-gnu/libOpenCL.so.1`
-- Compile Caffe
-	```> make```
-	Note: You can enable multithreaded compilation with`-j<# threads_available>` to speed up the process. 
-	For an 8 core machine we can use : ```make -j8```
-- Install Caffe
-	```> make install```
-- Test Caffe
-	```> make runtest```
-	Note2: For multithreaded build, add `-j<# cores_available>` to speed up process. Eg. make -j8 for 8 threaded CPU.
+	- ```> cmake -DViennaCL_INCLUDE_DIR=../ViennaCL-* -DOPENCL_INCLUDE_DIRS=../ViennaCL-*/CL/ -DOPENCL_LIBRARIES=/opt/amdgpu-pro/lib/x86_64-linux-gnu/libOpenCL.so.1 ..```
+	- Note: By default OpenCL libraries for AMDGPU is at `/opt/amdgpu-pro/x86_64-linux-gnu/libOpenCL.so.1`
+- Compile Caffe: ```> make```
+	- Note: You can enable multithreaded compilation with`-j<# threads_available>` to speed up the process. 
+	- For an 8 core machine we can use : ```make -j8```
+- Install Caffe: ```> make install```
+- Test Caffe: ```> make runtest```
+	- Note2: For multithreaded build, add `-j<# cores_available>` to speed up process. Eg. make -j8 for 8 threaded CPU.
 
 ##### 7. Try CIFAR (CANADIAN INSTIT. FOR ADVANCED RESEARCH DATA TRAINING)
 - Go to your caffe path : ```cd $OCLCAFFE```
