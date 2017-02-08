@@ -26,9 +26,7 @@
 		```> cd python```
 	- Install all required packages with `pip`
 		```> for req in $(cat requirements.txt); do sudo -H pip install $req; done```
-	- Add PyCaffe module to `$PYTHONPATH`
-		```> export PYTHONPATH=$OCLCAFFE/python:$PYTHONPATH```
-
+		
 #### 3. Install AMDGPU-PRO Driver for Linux
 - [Download AMDGPU-PRO Driver](http://support.amd.com/en-us/kb-articles/Pages/AMDGPU-PRO-Driver-for-Linux-Release-Notes.aspx)
 - [Follow instruction to install AMDGPU-PRO Driver for Ubuntu](http://support.amd.com/en-us/kb-articles/Pages/AMDGPU-PRO-Install.aspx)
@@ -67,4 +65,6 @@
 	- `./examples/cifar10/train_quick.sh`
 
 - Note: You can substitute train_quick with train_full as needed. This will increase the time needed to fully train the model, however. 
+- Optional: Add PyCaffe module to `$PYTHONPATH`
+		```> export PYTHONPATH=$OCLCAFFE/python:$PYTHONPATH```
 	
