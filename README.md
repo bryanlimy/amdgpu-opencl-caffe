@@ -21,12 +21,6 @@
 #### 2. Install general dependencies
 - ```sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler libatlas-base-dev libblas-dev libgflags-dev libgoogle-glog-dev liblmdb-dev libboost-all-dev cmake git python-numpy cmake```
 
-- Enabling Caffe's pythonic interface (PyCaffe):
-	- Navigate to `python` in `/caffe`
-		```> cd python```
-	- Install all required packages with `pip`
-		```> for req in $(cat requirements.txt); do sudo -H pip install $req; done```
-		
 #### 3. Install AMDGPU-PRO Driver for Linux
 - [Download AMDGPU-PRO Driver](http://support.amd.com/en-us/kb-articles/Pages/AMDGPU-PRO-Driver-for-Linux-Release-Notes.aspx)
 - [Follow instruction to install AMDGPU-PRO Driver for Ubuntu](http://support.amd.com/en-us/kb-articles/Pages/AMDGPU-PRO-Install.aspx)
@@ -65,6 +59,12 @@
 	- `./examples/cifar10/train_quick.sh`
 
 - Note: You can substitute train_quick with train_full as needed. This will increase the time needed to fully train the model, however. 
+
+- Enabling Caffe's pythonic interface (PyCaffe):
+	- Navigate to `python` in `/caffe`
+		```> cd python```
+	- Install all required packages with `pip`
+		```> for req in $(cat requirements.txt); do sudo -H pip install $req; done```
 - Optional: Add PyCaffe module to `$PYTHONPATH`
 		```> export PYTHONPATH=$OCLCAFFE/python:$PYTHONPATH```
 	
