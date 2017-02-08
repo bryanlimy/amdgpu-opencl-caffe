@@ -1,4 +1,4 @@
-# amdgpu-opencl-caffe
+# AMDGPU OpenCL Caffe
 ### Enablement for [Caffe (OpenCL)](https://github.com/BVLC/caffe/tree/opencl) on AMD GPUs
 
 ####Authors
