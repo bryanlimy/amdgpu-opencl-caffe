@@ -43,7 +43,7 @@
 - Create directory for cmake: ```> mkdir build```
 - Navigate to `build`: ```> cd build```
 - Configure and cmake Caffe
-	- ```> cmake -DViennaCL_INCLUDE_DIR=../ViennaCL-* -DOPENCL_INCLUDE_DIRS=../ViennaCL-*/CL/ -DOPENCL_LIBRARIES=/opt/amdgpu-pro/lib/x86_64-linux-gnu/libOpenCL.so.1 ..```
+	- ```> cmake -DViennaCL_INCLUDE_DIR=../ViennaCL-<version>/ -DOPENCL_LIBRARIES=/opt/amdgpu-pro/lib/x86_64-linux-gnu/libOpenCL.so.1 ..```
 	- Note: By default OpenCL libraries for AMDGPU is at `/opt/amdgpu-pro/x86_64-linux-gnu/libOpenCL.so.1`
 - Compile Caffe: ```> make```
 	- Note: You can enable multithreaded compilation with`-j<# threads_available>` to speed up the process. (i.e. for an 8 core machine we can use : `make -j8`)
