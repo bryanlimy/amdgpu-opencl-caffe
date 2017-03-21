@@ -1,7 +1,7 @@
 # AMDGPU OpenCL Caffe
 ### Enablement for [Caffe (OpenCL)](https://github.com/BVLC/caffe/tree/opencl) on AMD GPUs
 
-####Authors
+#### Authors
 
 - Bryan Li (Bryan.Li@amd.com)
 - Ramin Ranjbar (Ramin.Ranjbar@amd.com)
@@ -35,7 +35,7 @@
 #### 5. Copy [ViennaCL](http://viennacl.sourceforge.net/) library
 - [Download ViennaCL for Linux](http://viennacl.sourceforge.net/viennacl-download.html)
 - Extract downloaded folder
-	'``> tar -xvf ViennalCL-<version>.tar.gz```
+	```> tar -xvf ViennalCL-<version>.tar.gz```
 - Copy extracted folder to Caffe
 	```> cp -r ViennalCL-<version> ~/caffe```
 
@@ -43,7 +43,7 @@
 - Create directory for cmake: ```> mkdir build```
 - Navigate to `build`: ```> cd build```
 - Configure and cmake Caffe
-	- ```> cmake -DViennaCL_INCLUDE_DIR=../ViennaCL-<version>/ -DOPENCL_LIBRARIES=/opt/amdgpu-pro/lib/x86_64-linux-gnu/libOpenCL.so.1 ..```
+	- ```> cmake -DViennaCL_INCLUDE_DIR=../ViennaCL-<version> -DOPENCL_INCLUDE_DIRS=../ViennaCL-<version>/CL/ -DOPENCL_LIBRARIES=/opt/amdgpu-pro/lib/x86_64-linux-gnu/libOpenCL.so.1 ..```
 	- Note: By default OpenCL libraries for AMDGPU is at `/opt/amdgpu-pro/x86_64-linux-gnu/libOpenCL.so.1`
 - Compile Caffe: ```> make```
 	- Note: You can enable multithreaded compilation with`-j<# threads_available>` to speed up the process. (i.e. for an 8 core machine we can use : `make -j8`)
