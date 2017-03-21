@@ -13,6 +13,7 @@
 - AMD Radeon GPU (tested on):
 	- Polaris (RX460)
 	- Fiji (R9 Fury, Fury X)
+	- Tonga (FirePro W7100)
 
 #### 1. Update to latest Canonical release
 - Update the apt metadata: ```sudo apt-get update```
