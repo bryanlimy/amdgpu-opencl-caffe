@@ -2,10 +2,8 @@
 ### Enablement for [Caffe (OpenCL)](https://github.com/BVLC/caffe/tree/opencl) on AMD GPUs
 
 #### Authors
-
 - Bryan Li (Bryan.Li@amd.com)
 - Ramin Ranjbar (Ramin.Ranjbar@amd.com)
-
 
 #### System Requirement
 - Ubuntu 16.04 or equivalent
@@ -32,6 +30,7 @@
 	- `> cd ~ ; git clone https://github.com/BVLC/caffe`
 	- `> cd caffe ; git checkout opencl`
 	- `> export OCLCAFFE=$PWD`
+- NOTE - tested commit [c61d48746b2df1d237c64abc7416342ce98f3251](https://github.com/BVLC/caffe/tree/c61d48746b2df1d237c64abc7416342ce98f3251)
 
 #### 5. Copy [ViennaCL](http://viennacl.sourceforge.net/) library
 - [Download ViennaCL for Linux](http://viennacl.sourceforge.net/viennacl-download.html)
