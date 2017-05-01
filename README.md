@@ -21,6 +21,7 @@
 - ```sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler libatlas-base-dev libblas-dev libgflags-dev libgoogle-glog-dev liblmdb-dev libboost-all-dev cmake git python-numpy cmake```
 
 #### 3. Install AMDGPU-PRO Driver for Linux
+- [**Optional](You can install driver by executing the helper script "driver_install.sh" script that is supplied in this repository.)
 - [Download AMDGPU-PRO Driver](http://support.amd.com/en-us/kb-articles/Pages/AMDGPU-PRO-Driver-for-Linux-Release-Notes.aspx)
 - [Follow instruction to install AMDGPU-PRO Driver for Ubuntu](http://support.amd.com/en-us/kb-articles/Pages/AMDGPU-PRO-Install.aspx)
 - Reboot to the kernel that loads the installed drivers

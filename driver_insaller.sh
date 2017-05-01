@@ -26,4 +26,6 @@ rm -rf $wizardroot
 if [ ans -e 'y'] then
 	rm -rf '$old_path/driver.tar.xz'
 	echo -e 'done'
+	sleep 1
+	sudo reboot now
 fi
