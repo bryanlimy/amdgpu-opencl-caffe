@@ -1,10 +1,6 @@
 # AMDGPU OpenCL Caffe
 ### Enablement for [Caffe (OpenCL)](https://github.com/BVLC/caffe/tree/opencl) on AMD GPUs
 
-#### Authors
-- Bryan Li (Bryan.Li@amd.com)
-- Ramin Ranjbar (Ramin.Ranjbar@amd.com)
-
 #### System Requirement
 - Ubuntu 16.04 or equivalent
 	- Note that a supported (valid) opencl enabled driver stack is needed from AMD
