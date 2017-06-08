@@ -18,7 +18,7 @@
 - Upgrade the packages: ```sudo apt-get upgrade```
 
 #### 2. Install general dependencies
-- ```sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler libatlas-base-dev libblas-dev libgflags-dev libgoogle-glog-dev liblmdb-dev libboost-all-dev cmake git python-numpy cmake```
+- ```sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler libatlas-base-dev libblas-dev libgflags-dev libgoogle-glog-dev liblmdb-dev libboost-all-dev cmake git python-numpy python-pip cmake```
 
 #### 3. Install AMDGPU-PRO Driver for Linux
 - **Optional - You can install driver by executing the helper script "driver_install.sh" script that is supplied in this repository.
